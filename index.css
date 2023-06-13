@@ -1,0 +1,108 @@
+h1 {
+    color: red;
+    text-align: center;
+    font: size 6px;
+}
+h3 {
+    color:blue;
+    text-decoration: wavy;
+    text-align:center;
+    
+
+}
+h2 {
+    color: red;
+    text-overflow: ellipsis;
+    font-family: sans-serif;
+
+
+}
+h4 {
+    color:  white;
+    text-align: left;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    
+    
+
+
+}
+
+h5 {
+    color: white;
+    text-rendering: geometricPrecision;
+    text-align: center;
+}
+
+h6 {
+    color: white;
+    text-align:center
+    
+    
+}
+
+
+body {
+    background-color:black
+}
+<style>
+  .hidden {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .expand-button {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+  }
+
+  #jokenpo-details {
+    color: green;
+    font-size: 90%;
+  }
+</style>
+
+<style>
+  .hidden {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .expand-button {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+  }
+
+  #karaoke-details {
+    color: green;
+    font-size: 90%;
+  }
+</style>
+
+<style>
+  .hidden {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .expand-button {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+  }
+
+  #genio-quiz-details {
+    color: green;
+    font-size: 90%;
+  }
+</style>

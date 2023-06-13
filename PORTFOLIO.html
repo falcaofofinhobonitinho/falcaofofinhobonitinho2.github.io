@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <style>
+    .hidden {
+      display: none;
+    }
+
+    .show {
+      display: block;
+    }
+
+    .expand-button {
+      cursor: pointer;
+      color: blue;
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    function toggleText(elementId) {
+      var element = document.getElementById(elementId);
+      element.classList.toggle("show");
+    }
+  </script>
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>PORTFOLIO</h1>
+  <h6>FEITO POR GUILHERME FALCAO.</h6>
+  <h5>Estudante do primeiro período de Ciência da Computação.</h5>
+  <h2>Alguns de seus projetos:</h2>
+  <h3>Jokenpo:</h3>
+  <h4>Ajudou a desenvolver um jogo de jokenpo com randomizador de escolha, AI e contador de score em Python.
+    <span class="hidden" id="jokenpo-details">print("\n| Jokenpô |  \n1 - humano x humano \n2 - humano x computador \n3 - computador x computador \n")
+        modalidade = int(input("Escolha a modalidade: "))
+        #esclarecimento quanto à linguagem empregada no código: tentamos dar um humor salgado e impaciente à máquina para dar um tom mais humorístico na coisa toda
+        while modalidade != 1 and modalidade != 2 and modalidade != 3:
+            modalidade = int(input("\nModalidade inválida! Escolha entre 1, 2 ou 3: "))
+        
+        
+        
+        
+        #tipo de jogo 1 humano x ser humaninho (desenvolvido por Tarso e Falcão)
+        #Este é um trecho de código escrito na linguagem de programação Python que contém uma estrutura condicional que verifica se a variável "modalidade" é igual a 1.
+        #Se for igual a 1, o programa pede que o usuário insira o nome de dois jogadores e, em seguida, apresenta as opções de jogadas disponíveis (pedra, papel ou tesoura).
+        #O programa, então, solicita que cada jogador faça sua escolha, digitando um número que corresponde a uma das opções apresentadas.
+        #Em seguida, o programa atribui o valor digitado pelo jogador 1 à variável "jogador1" e o valor digitado pelo jogador 2 à variável "jogador2".
+        #Além disso, o programa define as variáveis "sair", "pontos1" e "pontos2" como 0, e a partir desse ponto, essas variáveis podem ser usadas para controlar o
+        #fluxo do programa e armazenar a pontuação de cada jogador.
+        
+        #Caso a variável "modalidade" não seja igual a 1, o restante do código não será executado e o programa continuará sua execução a partir do próximo trecho de código.
+        if modalidade == 1:
+            nome1 = input("\nDigite o nome do primeiro player: ")
+            nome2 = input("Digite o nome do segundo player: ")
+            print("\nOlá " + str(nome1) + " e " + str(nome2) + "! Vamos começar a jogar!\n")
+        
+            print("Escolha uma das opções:\n1(Pedra) \n2(Papel) \n3(Tesoura)\n")
+            jogador1 = int(input("A escolha de " + (nome1) + " é: "))
+            jogador2 = int(input("A escolha de " + (nome2) + " é: "))
+            sair = 0 or 1
+            pontos1 = 0
+            pontos2 = 0
+        
+            while sair != 0:
+                if (jogador1 == 1 and jogador2 == 1) or (jogador1 == 2 and jogador2 == 2) or (jogador1 == 3 and jogador2 == 3):
+                    print(
+                        "\nAmb!" + "\n\n" + (nome1) + " x " + (nome2) + "\n" + str(pontos1) + " x " + str(pontos2))
+                elif (jogador1 == 1 and jogador2 == 2) or (jogador1 == 2 and jogador2 == 3) or (
+                        jogador1 == 3 and jogador2 == 1):
+                    pontos2 += 1
+                    print("\n" + (nome2) + " venceu, aleluia também né, muito burro" + "\n\n" + (nome1) + " x " + (nome2) + "\n" + str(pontos1) + " x " + str(
+                        pontos2))
+                elif (jogador1 == 1 and jogador2 == 3) or (jogador1 == 2 and jogador2 == 1) or (
+                        jogador1 == 3 and jogador2 == 2):
+                    pontos1 += 1
+                    print("\n" + (nome1) + " vitória, mas a que custo?" + "\n\n" + (nome1) + " x " + (nome2) + "\n" + str(pontos1) + " x " + str(
+                        pontos2))
+                else:
+                    print("\nEsta jogada não é válida")
+                print("\nVocê gostaria de continuar, mesmo, namoral mesmo? vc nn me deixa em paz..")
+                sair = int(input("Se quer continuar escreva qualquer número seu chato do cara*#$,  se quiser sair..porfavor..digite 0: "))
+        
+                if sair == 0:
+                    print(
+                        "\n\n\n Tarso, JP, Ferraz e Falcão estão angustiados pela reação da professora :))))) \n\n\n | Tabela de pontos |  \n" + (
+                            nome1) + " x " + (nome2) + "\n" + str(pontos1) + " x " + str(pontos2))
+                else:
+                    print("\nEscolha um dos três:\n1(Pedra) \n2(Papel) \n3(Tesoura)\n")
+                    jogador1 = int(input("A escolha de " + (nome1) + " é: "))
+                    jogador2 = int(input("A escolha de " + (nome2) + " é: "))
+        
+        
+        
+        
+        
+        
+        # tipo 2 de jogo - homem x máquina(Desenvolvido por João Pedro e Ferraz)
+        #contém uma estrutura condicional que verifica se a variável "modalidade" é igual a 2.
+        #Se for igual a 2, o programa pede que o usuário insira seu nome e, em seguida, apresenta as opções de jogadas disponíveis (pedra, papel ou tesoura).
+        #O programa, então, gera uma jogada aleatória para o jogador 2, que é armazenada na variável "jogador2".
+        #Além disso, as variáveis "sair", "pontos1" e "pontos2" são definidas como 0, e a partir desse ponto,
+        #essas variáveis podem ser usadas para controlar o fluxo do programa e armazenar a pontuação de cada jogador.
+        #Em seguida, o programa entra em um laço de repetição que é executado enquanto a variável "sair" for diferente de 0.
+        #Dentro do laço, o programa verifica as jogadas dos jogadores 1 e 2 e calcula a pontuação de acordo com as regras do jogo.
+        #O resultado de cada jogada é impresso na tela, juntamente com a pontuação atualizada de cada jogador.
+        #Após cada jogada, o programa pergunta ao usuário se ele deseja continuar jogando.
+        #Se a resposta for 0, o laço de repetição é interrompido e o programa apresenta a pontuação final de cada jogador.
+        #Caso contrário, o programa pede que o usuário faça outra escolha de jogada e o laço de repetição continua.
+        
+        
+        elif modalidade == 2:
+            nome = input("\nEscreve seu nome aí.....saco...: ")
+            print("\nOlá, " + str(nome) + "! Vamo jogar logo caramba!\n")
+        
+            import random
+        
+            opcao = [1, 2, 3]
+            jogador2 = random.choice(opcao)
+            sair = 0 or 1
+            pontos1 = 0
+            pontos2 = 0
+            print("Escolha um dos três:\n1(Pedra) \n2(Papel) \n3(Tesoura)\n")
+            jogador1 = int(input("que piada, sua escolha é: "))
+        
+            while sair != 0:
+                if jogador1 == jogador2:
+                    print("A máquina jogou " + str(jogador2) + "\nVocês empataram, saco, não aguento mais calcular!" + "\n\n" + (
+                        nome) + " x máquina" + "\n" + str(pontos1) + " x " + str(pontos2))
+                elif (jogador1 == 1 and jogador2 == 3) or (jogador1 == 2 and jogador2 == 1) or (
+                        jogador1 == 3 and jogador2 == 2):
+                    pontos1 += 1
+                    print("A máquina jogou " + str(jogador2) + "\n" + (nome) + " saiu vitorioso!" + "\n\n" + (
+                        nome) + " x máquina" + "\n" + str(pontos1) + " x " + str(pontos2))
+                elif (jogador1 == 2 and jogador2 == 3) or (jogador1 == 1 and jogador2 == 2) or (
+                        jogador1 == 3 and jogador2 == 1):
+                    pontos2 += 1
+                    print("A máquina jogou " + str(jogador2) + "\n" + "A máquina ganhou!" + "\n\n" + (
+                        nome) + " x A máquina" + "\n" + str(pontos1) + " x " + str(pontos2))
+                else:
+                    print("\nJogada inválida, tente novamente!")
+        
+                print("\nVocê quer continuar o jogo?Por favor diga que não, estou sinceramente cansado")
+                sair = int(input("Se quiser continuar, digite qualquer número. Por favor, só saia duma vez, aperte 0: "))
+        
+                if sair == 0:
+                    print(
+                        "\n\n\n Os integrantes do grupo estão suando pois amanhã tem prova\n\n\n | Pontuação|  \n" + (
+                            nome) + " x máquina" + "\n" + str(pontos1) + " x " + str(pontos2))
+                else:
+                    print("\nEscolha uma das três opções:\n1(Pedra) \n2(Papel) \n3(Tesourassa)\n")
+                    jogador1 = int(input("A sua escolha é: "))
+                    jogador2 = random.choice(opcao)
+        
+        
+        
+        
+        #tipo de jogo 3 - Skynet vs Skynet
+        #feito por Ferraz e Tarso
+        #O código está ompleto e funcionando para o jogo de Pedra-Papel-Tesoura com dois jogadores controlados pela máquina, ou seja, na modalidade 3.
+        #O jogo é interrompido quando o usuário digita 0 em vez de um número para continuar jogando.
+        #Caso o usuário deseje continuar o jogo, ele terá que digitar qualquer número diferente de zero. Em seguida, os jogadores (controlados pela máquina) escolhem aleatoriamente entre Pedra, Papel e Tesoura.
+        #As opções escolhidas pelos jogadores são comparadas e o resultado é mostrado na tela, juntamente com o placar atual.
+        #Por fim, quando o jogo é encerrado pelo usuário, o placar final é exibido na tela.
+        elif modalidade == 3:
+            import random
+        
+            select = [1, 2, 3]
+            jogador1 = random.choice(select)
+            jogador2 = random.choice(select)
+            sair = 0 or 1
+            pontos1 = 0
+            pontos2 = 0
+            print("\n1(Pedra) \n2(Papel) \n3(Tesoura)\n")
+        
+            while sair != 0:
+                if jogador1 == jogador2:
+                    print("A máquina 1 jogou " + str(jogador1) + "\n A máquina 2 " + str(
+                        jogador2) + "\nEmpate!" + "\n\nmáquina1 x máquina2" + "\n" + str(pontos1) + " x " + str(
+                        pontos2))
+                elif (jogador1 == 1 and jogador2 == 3) or (jogador1 == 2 and jogador2 == 1) or (
+                        jogador1 == 3 and jogador2 == 2):
+                    pontos1 += 1
+                    print("A máquina 1 jogou " + str(jogador1) + "\nA máquina 2 jogou " + str(
+                        jogador2) + "\nA máquina 1 ganhou!" + "\n\nA máquina 1 x A máquina 2" + "\n" + str(
+                        pontos1) + " x " + str(pontos2))
+                elif (jogador1 == 1 and jogador2 == 2) or (jogador1 == 2 and jogador2 == 3) or (
+                        jogador1 == 3 and jogador2 == 1):
+                    pontos2 += 1
+                    print("A máquina 1 jogou " + str(jogador1) + "\nA máquina 2 jogou " + str(
+                        jogador2) + "\nA máquina 2 ganhou!" + "\n\nA máquina 1 x A máquina" + "\n" + str(
+                        pontos1) + " x " + str(pontos2))
+        
+                print("\nVocê quer continuar o jogo?Sinceramente, eu não aguento mais, minhas conexões estão fervendo, me desligue de uma vez")
+                sair = int(input("Se quiser continuar, digite qualquer número. Caso queira sair, digite 0: "))
+        
+                if sair == 0:
+                    print(
+                        "\n\n\n Tarso, JP, Ferraz e Falcão e companhia estão gratos e tensos pela jogatina, adeuuushh \n\n\n | Placar | \n" + "A máquina 1 x A máquina 2" + "\n" + str(
+                            pontos1) + " x " + str(pontos2))
+                else:
+                    print("\n1(Pedra) \n2(Papel) \n3(Tesoura)\n")
+                    jogador1 = random.choice(select)
+                    jogador2 = random.choice(select)</span>
+    <span class="expand-button" onclick="toggleText('jokenpo-details')">Ver mais</span>
+  </h4>
+  <h3>Jogo Genio Quiz</h3>
+  <h4>Participou do desenvolvimento de um jogo no estilo Genio Quiz na faculdade.
+    <span class="hidden" id="genio-quiz-details">Feito em construct 3.</span>
+    <span class="expand-button" onclick="toggleText('genio-quiz-details')">Ver mais</span>
+  </h4>
+  <h3>Karaoke</h3>
+  <h4>Foi vital no desenvolvimento de um projeto de Karaoke em Java.
+    <span class="hidden" id="karaoke-details">CODIGO NAO DISPONIVEL</span>
+    <span class="expand-button" onclick="toggleText('karaoke-details')">Ver mais</span>
+  </h4>
+  <h5>COPYRIGHT: GL STUDIOS 2023</h5>
+  
+</body>
+
+</html>
